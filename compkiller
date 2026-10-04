@@ -8342,6 +8342,12 @@ function Compkiller.new(Config : Window)
 			CompLogo.SizeConstraint = Enum.SizeConstraint.RelativeYY
 			CompLogo.ZIndex = 159
 			CompLogo.Image = Config.Logo
+            CompLogo.ImageColor3 = Compkiller.Colors.Highlight
+
+			table.insert(Compkiller.Elements.Highlight,{
+				Element = CompLogo,
+				Property = "ImageColor3"
+			});
 
 			WaternarkList.Name = Compkiller:_RandomString()
 			WaternarkList.Parent = Watermark
