@@ -3997,7 +3997,7 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal)
 		TextLabel.Text = Config.Name;
 		TextLabel.TextColor3 = Compkiller.Colors.SwitchColor
 		TextLabel.TextSize = 12.000
-		TextLabel.TextStrokeTransparency = 0.500
+		TextLabel.TextStrokeTransparency = 0.700
 
 		table.insert(Compkiller.Elements.SwitchColor , {
 			Element = TextLabel,
@@ -4039,7 +4039,7 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal)
 				});
 
 				Compkiller:_Animation(TextLabel, TweenInfo.new(0.35),{
-					TextStrokeTransparency = 0.500,
+					TextStrokeTransparency = 0.700,
 					TextTransparency = 0
 				});
 
