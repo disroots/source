@@ -3997,7 +3997,7 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal)
 		TextLabel.Text = Config.Name;
 		TextLabel.TextColor3 = Compkiller.Colors.SwitchColor
 		TextLabel.TextSize = 12.000
-		TextLabel.TextStrokeTransparency = 0.900
+		TextLabel.TextStrokeTransparency = 0.500
 
 		table.insert(Compkiller.Elements.SwitchColor , {
 			Element = TextLabel,
@@ -4039,7 +4039,7 @@ function Compkiller:_LoadElement(Parent: Frame , EnabledLine: boolean , Signal)
 				});
 
 				Compkiller:_Animation(TextLabel, TweenInfo.new(0.35),{
-					TextStrokeTransparency = 0.900,
+					TextStrokeTransparency = 0.500,
 					TextTransparency = 0
 				});
 
@@ -8049,7 +8049,7 @@ function Compkiller.new(Config : Window)
 				if IsOpen then
 					if Section:GetAttribute('Height') and not Compkiller:_IsMobile() then
 						Compkiller:_Animation(Section,TweenInfo.new(0.4,Enum.EasingStyle.Quint),{
-							Size = UDim2.new(1, 0, 0, math.abs(Section:GetAttribute('Height')) + 5)
+						Size = UDim2.new(1, 0, 0, math.max(math.abs(Section:GetAttribute('Height')) + 5, math.abs(UIListLayout.AbsoluteContentSize.Y) - 1))
 						});
 					else
 						Compkiller:_Animation(Section,TweenInfo.new(0.4,Enum.EasingStyle.Quint),{
